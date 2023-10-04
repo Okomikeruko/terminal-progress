@@ -16,7 +16,7 @@ jobs:
 
     services:
       xvfb:
-        image: ubuntu
+        image: ubuntu:latest
     
     steps:
     - uses: actions/checkout@v3
