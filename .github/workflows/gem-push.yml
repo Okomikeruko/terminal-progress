@@ -35,6 +35,8 @@ jobs:
       run: |
         bundle exec ruby -Ilib:test test/test_terminal_progress.rb
         bundle exec rubocop
+      env:
+        TERM: xterm-256color
 
     - name: Publish to GPR
       run: |
