@@ -23,6 +23,7 @@ jobs:
 
     - name: Minitest & Lint
       run: |
+        bundle install
         ruby -Ilib:test test/test_terminal_progress.rb
         rubocop
 
