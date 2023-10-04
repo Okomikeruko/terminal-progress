@@ -14,6 +14,10 @@ jobs:
       contents: read
       packages: write
 
+    services:
+      xvfb:
+        image: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby 3.1.4
@@ -21,11 +25,16 @@ jobs:
       with:
         ruby-version: 3.1.4
 
+    - name: Install dependencies
+      run : |
+        bundle install
+      env:
+        TERM: xterm-256color
+
     - name: Minitest & Lint
       run: |
-        bundle install
-        ruby -Ilib:test test/test_terminal_progress.rb
-        rubocop
+        bundle exec ruby -Ilib:test test/test_terminal_progress.rb
+        bundle exec rubocop
 
     - name: Publish to GPR
       run: |
