@@ -1,7 +1,7 @@
 # Terminal Progress
 
 [![Gem Version](https://badge.fury.io/rb/terminal-progress.svg)](https://badge.fury.io/rb/terminal-progress)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Okomikeruko/terminal-progress/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Okomikeruko/terminal-progress/blob/master/LICENSE)
 
 Terminal Progress is a versatile and customizable progress bar manager for Ruby applications. It provides an elegant and interactive way to display progress updates in the terminal, making it ideal for tasks like seed data generation, file processing, or any operation where progress tracking is crucial.
 
@@ -43,7 +43,7 @@ Here's a quick example of how to use Terminal Progress in your Ruby application:
 require 'terminal-progress'
 
 # Create a new progress bar with a maximum value
-progress_bar = TermProg.new(100)
+progress_bar = TerminalProgress.new(100)
 
 # Update and display the progress bar
 (0..100).each do |i|
@@ -55,17 +55,13 @@ end
 progress_bar.print_complete
 ```
 
-For more detailed usage instructions and customization options, please refer to
-the [documentation](https://github.com).
-
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at
-[Terminal Progress Repository](https://github.com). Please follow our
-[contributing guidelines](https://github.com).
+Bug reports and pull requests are welcome on GitHub at our
+[Terminal Progress Repository](https://github.com/Okomikeruko/terminal-progress).
 
 ## License
 
 Terminal Progress is available as open-source software under the
-[MIT License](https://github.com).
+[MIT License](https://github.com/Okomikeruko/terminal-progress/blob/master/LICENSE).
 
