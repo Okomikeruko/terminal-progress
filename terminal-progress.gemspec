@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'colorize', '= 1.1.0'
   s.add_runtime_dependency 'curses', '= 1.4.4'
 
-  s.add_development_dependency 'minitest'
-  s.add_development_dependency 'rubocop'
-  s.add_development_dependency 'stringio'
+  s.add_development_dependency 'minitest', '= 5.20.0'
+  s.add_development_dependency 'rubocop', '= 1.56.3'
+  s.add_development_dependency 'stringio', '= 3.0.8'
 end
