@@ -26,6 +26,7 @@ jobs:
 
     - name: Minitest
       run: |
+        gem install curses -v 1.4.4
         ruby -Ilib:test test/test_terminal_progress.rb
 
     - name: Lint
