@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 require 'stringio'
-require 'terminal-progress'
+require 'terminal_progress'
 
 class TestTerminalProgress < Minitest::Test
   def setup
