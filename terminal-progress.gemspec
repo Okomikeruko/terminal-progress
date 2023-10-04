@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.name = 'terminal-progress'
   s.version = '0.1.0'
+  s.licenses = ['MIT']
   s.authors = ['Lee Whittaker']
   s.description = <<-TEXT
     Terminal Progress is a progress bar manager for Ruby applications. It
