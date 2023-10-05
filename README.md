@@ -1,7 +1,7 @@
 # Terminal Progress
 
-[![Gem Version](https://badge.fury.io/rb/terminal-progress.svg?v=1696463352)](https://badge.fury.io/rb/terminal-progress)
-[![GitHub Packages](https://img.shields.io/badge/github_packages-0.1.0.1-44cc11.svg?v=1696463352)](https://github.com/Okomikeruko/terminal-progress/packages)
+[![Gem (including prereleases)](https://img.shields.io/gem/v/terminal-progress?label=gem%20version&color=44cc11)](https://rubygems.org/gems/terminal-progress)
+[![GitHub Packages](https://img.shields.io/badge/github_packages-0.1.0.2-44cc11.svg?v=1696463352)](https://github.com/Okomikeruko/terminal-progress/packages)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Okomikeruko/terminal-progress/blob/master/LICENSE)
 
 Terminal Progress is a versatile and customizable progress bar manager for Ruby
