@@ -1,11 +1,13 @@
 # Terminal Progress
 
-[![Gem Version](https://badge.fury.io/rb/terminal-progress.svg)](https://badge.fury.io/rb/terminal-progress)
+[![Gem Version](https://badge.fury.io/rb/terminal-progress.svg?v=1696463352)](https://badge.fury.io/rb/terminal-progress)
+[![GitHub Packages](https://img.shields.io/badge/github_packages-0.1.0.1-44cc11.svg?v=1696463352)](https://github.com/Okomikeruko/terminal-progress/packages)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Okomikeruko/terminal-progress/blob/master/LICENSE)
 
-Terminal Progress is a versatile and customizable progress bar manager for Ruby applications. It provides an elegant and interactive way to display progress updates in the terminal, making it ideal for tasks like seed data generation, file processing, or any operation where progress tracking is crucial.
-
-![Terminal Progress Demo](demo.gif)
+Terminal Progress is a versatile and customizable progress bar manager for Ruby
+applications. It provides an elegant and interactive way to display progress
+updates in the terminal, making it ideal for tasks like seed data generation,
+file processing, or any operation where progress tracking is crucial.
 
 ## Features
 
@@ -20,7 +22,7 @@ Terminal Progress is a versatile and customizable progress bar manager for Ruby 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'terminal-progress'
+gem 'terminal-progress', '~> 0.1.0'
 ```
 
 And then execute
