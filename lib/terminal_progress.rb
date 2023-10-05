@@ -10,12 +10,12 @@ class TerminalProgress
   #
   # @param max [Integer] The maximum value of the progress bar.
   def initialize(max)
-    Curses.raw
-    instance_variable_set(:@cycle, '⣷⣯⣟⡿⢿⣻⣽⣾'.split(//).cycle)
-    instance_variable_set(:@i, 0)
-    instance_variable_set(:@max, max)
-    instance_variable_set(:@stop, '⣾')
-    instance_variable_set(:@loop, loop_thread)
+    Curses.init_screen
+    @cycle = '⣷⣯⣟⡿⢿⣻⣽⣾'.chars.cycle
+    @i = 0
+    @max = max
+    @stop = '⣾'
+    @loop = loop_thread
   end
 
   def loop_thread
@@ -48,20 +48,14 @@ class TerminalProgress
   ##
   # This is the last call to terminate the progress loop and finish rendering the bar.
   def print_complete
-    printf "    #{@max}/#{@max}: [#{'='.light_yellow * width}#{suffix}\r\n"
     kill
+    printf "    #{@max}/#{@max}: [#{'='.light_yellow * width}#{suffix}\r\n"
   end
 
   # Terminate the progress loop.
   def kill
     Thread.kill @loop
-  end
-
-  # Check if the progress loop is still alive.
-  #
-  # @return [Boolean] Returns true if the progress loop is alive, otherwise false.
-  def alive?
-    @loop.alive?
+    Curses.close_screen
   end
 
   private

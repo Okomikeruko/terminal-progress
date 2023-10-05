@@ -7,6 +7,7 @@ require 'terminal_progress'
 class TestTerminalProgress < Minitest::Test
   def setup
     @term_prog = TerminalProgress.new(10)
+    $stdout.sync = true
   end
 
   def test_print_progress
@@ -28,7 +29,7 @@ class TestTerminalProgress < Minitest::Test
   end
 
   def test_print_progress_generates_expected_output_during_loop
-    expected_sequence = ['⣷', '⣯', '⣟', '⡿', '⢿', '⣻', '⣽', '⣾']
+    expected_sequence = '⣷⣯⣟⡿⢿⣻⣽⣾'.chars
     output_capturer = StringIO.new
     $stdout = output_capturer
     @term_prog.print_progress
@@ -36,12 +37,13 @@ class TestTerminalProgress < Minitest::Test
     expected_sequence.each do |char|
       sleep 0.0625
       captured_output = output_capturer.string
+
       assert_match(/  #{Regexp.escape(char)}/, captured_output)
     end
   end
 
   def teardown
     $stdout = STDOUT
-    @term_prog.kill if @term_prog.alive?
+    @term_prog.kill
   end
 end

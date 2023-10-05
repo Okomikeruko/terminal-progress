@@ -2,8 +2,9 @@
 
 Gem::Specification.new do |s|
   s.name = 'terminal-progress'
-  s.version = '0.1.0.1'
+  s.version = '0.1.0.2'
   s.licenses = ['MIT']
+  s.metadata['rubygems_mfa_required'] = 'true'
   s.authors = ['Lee Whittaker']
   s.description = <<-TEXT
     Terminal Progress is a progress bar manager for Ruby applications. It
@@ -21,10 +22,6 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.1'
 
-  s.add_runtime_dependency 'colorize', '>= 1.1.0'
-  s.add_runtime_dependency 'curses', '>= 1.4.4'
-
-  s.add_development_dependency 'minitest', '>= 5.20.0'
-  s.add_development_dependency 'rubocop', '>= 1.56.3'
-  s.add_development_dependency 'stringio', '>= 3.0.8'
+  s.add_runtime_dependency 'colorize', '~> 1.1', '>= 1.1.0'
+  s.add_runtime_dependency 'curses', '~> 1.4', '>= 1.4.4'
 end
