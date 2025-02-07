@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/Okomikeruko/terminal-progress'
   s.files = Dir['lib/**/*.rb']
 
-  s.required_ruby_version = '>= 3.1'
+  s.required_ruby_version = '>= 2.5'
 
   s.add_runtime_dependency 'colorize', '~> 1.1', '>= 1.1.0'
   s.add_runtime_dependency 'curses', '~> 1.4', '>= 1.4.4'
