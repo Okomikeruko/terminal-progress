@@ -1,0 +1,32 @@
+name: Test and Lint
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: Test & Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby 3.1.4
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.4
+
+      - name: Install dependencies
+        run : bundle install
+        env:
+          TERM: xterm-256color
+
+      - name: Run tests & Lint
+        run: |
+          bundle exec ruby -Ilib:test test/test_terminal_progress.rb
+          bundle exec rubocop
+        env:
+          TERM: xterm-256color
+
