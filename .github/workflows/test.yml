@@ -10,7 +10,6 @@ jobs:
   build:
     name: Test & Lint
     runs-on: ubuntu-latest
-    permissions:
 
     steps:
       - uses: actions/checkout@v3
