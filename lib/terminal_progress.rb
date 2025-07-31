@@ -52,6 +52,21 @@ class TerminalProgress
     printf "    #{@max}/#{@max}: [#{'='.light_yellow * width}#{suffix}\r\n"
   end
 
+  # Call this to dynamically update the maximum value of the task bar.
+  def update_max(new_max)
+    raise ArgumentError, 'new_max must be positive' unless new_max.positive?
+
+    @max = new_max
+    @i = [@i, @max].min
+  end
+
+  # Call this to dynamically add a value to the maximum value of the task bar
+  def add_to_max(num)
+    raise ArgumentError, 'num must be positive' unless num.positive?
+
+    @max += num
+  end
+
   # Terminate the progress loop.
   def kill
     Thread.kill @loop
