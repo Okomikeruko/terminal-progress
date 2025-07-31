@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
     it ideal for tasks like seed data generation, file processing, or any
     operation where progress tracking is ideal.
   TEXT
-  s.email = 'whittakerlee81@gmail.com'
+  s.email = 'lee@whittakertech.com'
   s.summary = <<-TEXT
     terminal-progress - Simplify progress tracking in your Ruby applications
     with this simple progress bar manager.
