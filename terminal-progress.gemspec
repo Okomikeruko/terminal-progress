@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'terminal-progress'
-  s.version = '0.1.0.3'
+  s.version = '0.2.0'
   s.licenses = ['MIT']
   s.metadata['rubygems_mfa_required'] = 'true'
   s.authors = ['Lee Whittaker']
