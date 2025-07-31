@@ -22,6 +22,6 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.1'
 
-  s.add_runtime_dependency 'colorize', '~> 1.1', '>= 1.1.0'
-  s.add_runtime_dependency 'curses', '~> 1.4', '>= 1.4.4'
+  s.add_dependency 'colorize', '~> 1.1', '>= 1.1.0'
+  s.add_dependency 'curses', '~> 1.4', '>= 1.4.4'
 end
